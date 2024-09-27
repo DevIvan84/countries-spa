@@ -12,12 +12,12 @@
   </div>
 </div>
 
-<div class="row">
+<hr>
+
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
+<div class="row mt-2">
   <div class="col">
-    <ul>
-      <li *ngFor="let country of countries">
-          {{ country.capital }} - {{ country.population }}
-      </li>
-    </ul>
+    <countries-table [countries]="countries"></countries-table>
   </div>
 </div>
